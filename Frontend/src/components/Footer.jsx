@@ -25,7 +25,7 @@ const Footer = () => {
           </div>
           <div>
             <h4>Developed by</h4>
-            <p>Muhammad Fairooz</p>
+            <p>Ayesha Akter</p>
             <div className="social-icons">
               <a
                 href="https://fairooz2150.github.io/Fairooz/"
@@ -61,7 +61,7 @@ const Footer = () => {
             <h4>Contact</h4>
             <div>
               <FaPhone />
-              <span>999-999-9999</span>
+              <span>01787438107</span>
             </div>
             <div>
               <MdEmail />
@@ -69,7 +69,7 @@ const Footer = () => {
             </div>
             <div>
             <FaLocationDot/>
-            <span>Kerala, India</span>
+            <span>Dhaka, Bangladesh</span>
             </div>
           </div>
         </div>
@@ -80,4 +80,5 @@ const Footer = () => {
     </>
   );
 };
+
 export default Footer;
