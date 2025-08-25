@@ -11,8 +11,8 @@ import "react-toastify/dist/ReactToastify.css";
 import Navbar from "./components/Navbar";
 import { Context } from "./main";
 import axios from "axios";
-import Footer from "./components/footer";
 import Loading from "./components/loading"; 
+import Footer from "./components/Footer";
 
 const App = () => {
   const { isAuthenticated, setIsAuthenticated, setUser } = useContext(Context);
