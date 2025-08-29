@@ -32,7 +32,9 @@ export const patientRegister = catchAsyncErrors(async (req, res, next) => {
 
   let user = await User.findOne({ email });
   if (user) {
-    return next(new ErrorHandler("User already registered with this email!", 400));
+    return next(
+      new ErrorHandler("User already registered with this email!", 400)
+    );
   }
 
   user = await User.create({
