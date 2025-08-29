@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaGithub, FaInstagramSquare } from "react-icons/fa";
-import { RxLinkedinLogo } from "react-icons/rx";
+import { FaFacebookF } from "react-icons/fa";
 import { IoGlobeOutline } from "react-icons/io5";
 
 const Footer = () => {
@@ -35,21 +35,21 @@ const Footer = () => {
                 <IoGlobeOutline />
               </a>
               <a
-                href="https://www.linkedin.com/in/muhammad-fairooz-0b1136268/?trk=public-profile-join-page"
+                href="https://www.facebook.com/ar.badhon.71"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <RxLinkedinLogo />
+                <FaFacebookF />
               </a>
               <a
-                href="https://github.com/Fairooz2150"
+                href="https://github.com/ayeshaakter02"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaGithub />
               </a>
               <a
-                href="https://www.instagram.com/marsh__mell_o/?igsh=MWhwZmI5NDRsMWoxMQ%3D%3D"
+                href="https://www.instagram.com/ar.badhon.71/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
