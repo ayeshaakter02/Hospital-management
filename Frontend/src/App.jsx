@@ -13,6 +13,7 @@ import { Context } from "./main";
 import axios from "axios";
 import Loading from "./components/loading"; 
 import Footer from "./components/Footer";
+import AppointmentList from "./pages/AppointmentList";
 
 const App = () => {
   const { isAuthenticated, setIsAuthenticated, setUser } = useContext(Context);
@@ -50,6 +51,7 @@ const App = () => {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/appointment-list" element={<AppointmentList />} />
         </Routes>
         <Footer/>
         <ToastContainer position="top-center" />

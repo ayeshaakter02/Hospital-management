@@ -19,7 +19,6 @@ const Navbar = () => {
       .then((res) => {
         toast.success(res.data.message);
         setIsAuthenticated(false);
-        
       })
       .catch((err) => {
         toast.error(err.response.data.message);
@@ -28,7 +27,7 @@ const Navbar = () => {
 
   const gotoLogin = async () => {
     navigateTo("/login");
-    setShow(!show)
+    setShow(!show);
   };
 
   return (
@@ -36,13 +35,30 @@ const Navbar = () => {
       <nav className="container">
         <div className="logo">
           {" "}
-          <img src="/logo.png" alt="logo" className="logo-img" onClick={()=>navigateTo("/")}/>
+          <img
+            src="/logo.png"
+            alt="logo"
+            className="logo-img"
+            onClick={() => navigateTo("/")}
+          />
         </div>
         <div className={show ? "navLinks showmenu" : "navLinks"}>
           <div className="links">
-            <Link to={"/"} onClick={() =>  setShow(!show)}>Home </Link>
-            <Link to={"/appointment"} onClick={() =>  setShow(!show)}>Appointment </Link>
-            <Link to={"/about"} onClick={() =>  setShow(!show)}>About Us </Link>
+            <Link to={"/"} onClick={() => setShow(!show)}>
+              Home{" "}
+            </Link>
+            <Link to={"/appointment"} onClick={() => setShow(!show)}>
+              Appointment{" "}
+            </Link>
+            <Link to={"/about"} onClick={() => setShow(!show)}>
+              About Us{" "}
+            </Link>
+            <Link
+              className="px-4 py-2 bg-green-500 text-white rounded-lg"
+              to="/appointment-list"
+            >
+              View Appointments
+            </Link>
           </div>
           {isAuthenticated ? (
             <button className="logoutBtn btn" onClick={handleLogout}>
@@ -55,7 +71,7 @@ const Navbar = () => {
           )}
         </div>
         <div className="hamburger" onClick={() => setShow(!show)}>
-         {show? <GiHamburgerMenu /> : <AiOutlineClose />} 
+          {show ? <GiHamburgerMenu /> : <AiOutlineClose />}
         </div>
       </nav>
     </>
