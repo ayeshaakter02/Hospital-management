@@ -25,7 +25,7 @@ const Dashboard = () => {
         setAppointments([]);
         console.log("Some Error Occured While Fetching Appointments", error);
       } finally {
-        setLoading(false); 
+        setLoading(false);
       }
     };
     fetchAppointments();
@@ -38,8 +38,8 @@ const Dashboard = () => {
         { status },
         { withCredentials: true }
       );
-      setAppointments((prevAppointments) => 
-        prevAppointments.map((appointment) => 
+      setAppointments((prevAppointments) =>
+        prevAppointments.map((appointment) =>
           appointment._id === appointmentId
             ? { ...appointment, status }
             : appointment
@@ -54,7 +54,7 @@ const Dashboard = () => {
   };
 
   if (loading) {
-    return <Loading/> 
+    return <Loading />;
   }
 
   if (!isAuthenticated) {

@@ -17,7 +17,6 @@ const AddNewAdmin = () => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
-
   const navigateTo = useNavigate();
 
   const addNewAdmin = async (e) => {
@@ -52,10 +51,10 @@ const AddNewAdmin = () => {
   };
 
   if (loading) {
-    return <Loading/> 
+    return <Loading />;
   }
 
-if (!isAuthenticated) {
+  if (!isAuthenticated) {
     return <Navigate to={"/login"} />;
   }
 
@@ -130,7 +129,7 @@ if (!isAuthenticated) {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-     
+
             <div style={{ justifyContent: "center", alignItems: "center" }}>
               <button type="submit">Add New Admin</button>
             </div>

@@ -11,7 +11,6 @@ import axios from "axios";
 import Loading from "./components/loading";
 import "./App.css";
 
-
 const App = () => {
   const { isAuthenticated, setIsAuthenticated, setUser } = useContext(Context);
   const [loading, setLoading] = useState(true);
@@ -28,16 +27,15 @@ const App = () => {
       } catch (error) {
         setIsAuthenticated(false);
         setUser({});
-      }finally {
+      } finally {
         setLoading(false);
       }
     };
     fetchUser();
-  }, [isAuthenticated,setIsAuthenticated, setUser]);
-
+  }, [isAuthenticated, setIsAuthenticated, setUser]);
 
   if (loading) {
-    return <Loading />
+    return <Loading />;
   }
 
   return (
@@ -56,4 +54,3 @@ const App = () => {
 };
 
 export default App;
-
