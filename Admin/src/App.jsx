@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
+import AddNewAdmin from "./components/AddNewAdmin";
 import Login from "./components/Login";
 import Sidebar from "./components/Sidebar";
 import { ToastContainer } from "react-toastify";
@@ -46,6 +47,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/admin/addnew" element={<AddNewAdmin />} />
         </Routes>
         <ToastContainer position="top-center" />
       </Router>
