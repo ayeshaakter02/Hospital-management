@@ -61,3 +61,11 @@ const App = () => {
 };
 
 export default App;
+
+
+
+
+
+
+
+// "mongodb+srv://Hospital:H0$p!t@l@cluster0.fvc3cgi.mongodb.net/Hospital?retryWrites=true&w=majority&appName=Cluster0"
