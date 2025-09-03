@@ -14,8 +14,6 @@ const AppointmentForm = () => {
   const [appointmentDate, setAppointmentDate] = useState("");
   const [department, setDepartment] = useState("Pediatrics");
   const [doctorName, setDoctorName] = useState("");
-  // const [doctorFirstName, setDoctorFirstName] = useState("");
-  // const [doctorLastName, setDoctorLastName] = useState("");
   const [address, setAddress] = useState("");
   const [hasVisited, setHasVisited] = useState(false);
 
@@ -162,47 +160,11 @@ const AppointmentForm = () => {
                 );
               })}
             </select>
-            {/* <select
-              value={`${doctorFirstName} ${doctorLastName}`}
-              onChange={(e) => {
-                const [firstName, lastName] = e.target.value.split(" ");
-                setDoctorFirstName(firstName);
-                setDoctorLastName(lastName);
-              }}
-              disabled={!department}
-            >
-              <option value="">Select Doctor</option>
-              {doctors
-                .filter((doctor) => doctor.doctrDptmnt === department)
-                .map((doctor, index) => (
-                  <option
-                    value={`${doctor.firstName} ${doctor.lastName}`}
-                    key={index}
-                  >
-                    {doctor.firstName} {doctor.lastName}
-                  </option>
-                ))}
-            </select> */}
-
-            {/* <select value={doctorName} onChange={(e) => setDoctorName(e.target.value)}>
-              <option value="">Select Doctor</option>
-              <option value="Male">MD. Abul Kalam</option>
-              <option value="Female">Sabina Iasmin</option>
-              <option value="Female">Others</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Female">Others</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Others">Others</option>
-            </select> */}
 
             <select
               value={doctorName}
               onChange={(e) => {
                 setDoctorName(e.target.value);
-                // setDoctorFirstName("");
-                // setDoctorLastName("");
               }}
             >
               {doctorArray.map((depart, index) => {
@@ -235,7 +197,7 @@ const AppointmentForm = () => {
               style={{ flex: "none", width: "25px"}}
             />
           </div>
-          <button >Get Appointment</button>
+          <button type="submit">Get Appointment</button>
         </form>
       </div>
     </>
