@@ -168,14 +168,82 @@
 
 // export default List;
 
+// import React, { useEffect, useState } from "react";
+// import { ref, onValue, remove } from "firebase/database";
+// import { db } from "../firebase.config";
 
+// const List = () => {
+//   const [appointments, setAppointments] = useState([]);
 
+//   useEffect(() => {
+//     const appointmentsRef = ref(db, "appointments/");
+//     onValue(appointmentsRef, (snapshot) => {
+//       let data = [];
+//       snapshot.forEach((child) => {
+//         data.push({ id: child.key, ...child.val() });
+//       });
+//       setAppointments(data);
+//     });
+//   }, []);
 
+//   const handleDelete = (id) => {
+//     remove(ref(db, "appointments/" + id));
+//   };
 
+//   return (
+//     <div className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg">
+//       <h2 className="text-2xl font-bold mb-4">Appointment List</h2>
+//       <table className="w-full border-collapse border">
+//         <thead>
+//           <tr style={{ display: "flex",gap: "15px"}}>
+//             <th style={{padding: "8px" }}>Name</th>
+//             <th style={{padding: "8px" }}>Email</th>
+//             <th style={{padding: "8px" }}>Phone</th>
+//             <th style={{padding: "8px" }}>Appointment Date</th>
+//             <th style={{padding: "8px" }}>Department</th>
+//             <th style={{padding: "8px" }}>Doctor Name</th>
+//             <th style={{padding: "8px" }}>Action</th>
+//           </tr>
+//         </thead>
+//         <tbody>
+//           {appointments.map((a) => (
+//             <tr key={a.id} style={{ display: "flex",gap: "5px",  textAlign: "center" }}>
+//               <td style={{padding: "8px" }}>{a.firstName} {a.lastName}</td>
+//               <td style={{padding: "8px" }}>{a.email}</td>
+//               <td style={{padding: "8px" }}>{a.phone}</td>
+//               <td style={{padding: "8px" }}>{a.appointmentDate}</td>
+//               <td style={{padding: "8px" }}>{a.department}</td>
+//               <td style={{padding: "8px" }}>{a.doctorName}</td>
+//               <td style={{padding: "8px" }}>
+//                 <button
+//                   className="bg-red-500 text-white px-2 py-1 rounded"
+//                   style={{background: "#fb2c36" }}
+//                   onClick={() => handleDelete(a.id)}
+//                 >
+//                   Delete
+//                 </button>
+//               </td>
+//             </tr>
+//           ))}
+//           {appointments.length === 0 && (
+//             <tr>
+//               <td colSpan="6" className="text-gray-500 p-4">
+//                 No appointments found
+//               </td>
+//             </tr>
+//           )}
+//         </tbody>
+//       </table>
+//     </div>
+//   );
+// };
+
+// export default List;
 
 import React, { useEffect, useState } from "react";
 import { ref, onValue, remove } from "firebase/database";
 import { db } from "../firebase.config";
+// import "./List.css";
 
 const List = () => {
   const [appointments, setAppointments] = useState([]);
@@ -196,33 +264,42 @@ const List = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg">
-      <h2 className="text-2xl font-bold mb-4">Appointment List</h2>
-      <table className="w-full border-collapse border">
+    <div
+      style={{
+        margin: "40px auto",
+        padding: "24px",
+        background: "#fff",
+        borderRadius: "8px",
+        boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+      }}
+    >
+      <h2 className="list-title">Appointment List</h2>
+      <table className="list-table">
         <thead>
-          <tr style={{ display: "flex",gap: "15px"}}>
-            <th style={{padding: "8px" }}>Name</th>
-            <th style={{padding: "8px" }}>Email</th>
-            <th style={{padding: "8px" }}>Phone</th>
-            <th style={{padding: "8px" }}>Appointment Date</th>
-            <th style={{padding: "8px" }}>Department</th>
-            <th style={{padding: "8px" }}>Doctor Name</th>
-            <th style={{padding: "8px" }}>Action</th>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Appointment Date</th>
+            <th>Department</th>
+            <th>Doctor Name</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
           {appointments.map((a) => (
-            <tr key={a.id} style={{ display: "flex",gap: "5px",  textAlign: "center" }}>
-              <td style={{padding: "8px" }}>{a.firstName} {a.lastName}</td>
-              <td style={{padding: "8px" }}>{a.email}</td>
-              <td style={{padding: "8px" }}>{a.phone}</td>
-              <td style={{padding: "8px" }}>{a.appointmentDate}</td>
-              <td style={{padding: "8px" }}>{a.department}</td>
-              <td style={{padding: "8px" }}>{a.doctorName}</td>
-              <td style={{padding: "8px" }}>
+            <tr key={a.id}>
+              <td>
+                {a.firstName} {a.lastName}
+              </td>
+              <td>{a.email}</td>
+              <td>{a.phone}</td>
+              <td>{a.appointmentDate}</td>
+              <td>{a.department}</td>
+              <td>{a.doctorName}</td>
+              <td>
                 <button
-                  className="bg-red-500 text-white px-2 py-1 rounded"
-                  style={{background: "#fb2c36" }}
+                  className="delete-btn"
                   onClick={() => handleDelete(a.id)}
                 >
                   Delete
@@ -232,7 +309,7 @@ const List = () => {
           ))}
           {appointments.length === 0 && (
             <tr>
-              <td colSpan="6" className="text-gray-500 p-4">
+              <td colSpan="7" className="no-data">
                 No appointments found
               </td>
             </tr>
