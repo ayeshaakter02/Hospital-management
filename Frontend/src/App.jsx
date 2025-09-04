@@ -40,8 +40,8 @@ const App = () => {
   <Route path="/about" element={<div className="pt-24"><AboutUs /></div>} />
   <Route path="/register" element={<div className="pt-24"><Register /></div>} />
   <Route path="/login" element={<div className="pt-24"><Login /></div>} />
-  {/* <Route path="/list" element={<div className="pt-24"><AppointmentList /></div>} /> */}
-  {/* <Route path="/update/:id" element={<div className="pt-24"><Update /></div>} /> */}
+  <Route path="/appointment-list" element={<div className="pt-24"><AppointmentList /></div>} />
+  <Route path="/update/:id" element={<div className="pt-24"><Update /></div>} />
 </Routes>
         <Footer />
         <ToastContainer position="top-center" />
