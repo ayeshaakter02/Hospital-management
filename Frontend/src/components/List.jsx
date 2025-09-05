@@ -243,7 +243,6 @@
 import React, { useEffect, useState } from "react";
 import { ref, onValue, remove } from "firebase/database";
 import { db } from "../firebase.config";
-// import "./List.css";
 
 const List = () => {
   const [appointments, setAppointments] = useState([]);
@@ -273,8 +272,8 @@ const List = () => {
         boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
       }}
     >
-      <h2 className="list-title">Appointment List</h2>
-      <table className="list-table">
+      <h2 style={{marginBottom: "16px"}}>Appointment List</h2>
+      <table className="list-table" style={{marginBottom: "16px", width: "100%", borderCollapse: "collapse"}}>
         <thead>
           <tr>
             <th>Name</th>
