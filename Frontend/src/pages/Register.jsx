@@ -22,7 +22,6 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      // Step 1: Firebase Auth দিয়ে user create
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         email,
@@ -31,7 +30,6 @@ const Register = () => {
 
       const user = userCredential.user;
 
-      // Step 2: User details Firebase Realtime Database এ save
       await set(ref(db, "users/" + user.uid), {
         firstName,
         lastName,

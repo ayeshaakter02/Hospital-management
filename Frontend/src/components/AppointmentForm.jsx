@@ -6,17 +6,6 @@ import { ref, push } from "firebase/database";
 import { db } from "../firebase.config";
 
 const AppointmentForm = () => {
-  // const [firstName, setFirstName] = useState("");
-  // const [lastName, setLastName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [phone, setPhone] = useState("");
-  // const [nid, setNID] = useState("");
-  // const [dob, setDob] = useState("");
-  // const [gender, setGender] = useState("");
-  // const [appointmentDate, setAppointmentDate] = useState("");
-  // const [department, setDepartment] = useState("Pediatrics");
-  // const [doctorName, setDoctorName] = useState("");
-  // const [address, setAddress] = useState("");
   const [hasVisited, setHasVisited] = useState(false);
 
   const departmentsArray = [
@@ -76,7 +65,7 @@ const AppointmentForm = () => {
     address: form.address || "",
   })
       .then(() => {
-        alert("Appointment submitted!");
+        toast.success("Appointment submitted!");
         setForm({
           firstName: "",
           lastName: "",
@@ -93,49 +82,6 @@ const AppointmentForm = () => {
       })
       .catch((err) => console.error(err));
   };
-
-  // const handleAppointment = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const hasVisitedBool = Boolean(hasVisited);
-  //     const { data } = await axios.post(
-  //       "http://localhost:4000/api/v1/appointment/post",
-  //       {
-  //         firstName,
-  //         lastName,
-  //         email,
-  //         phone,
-  //         nid,
-  //         dob,
-  //         gender,
-  //         appointment_date: appointmentDate,
-  //         department,
-  //         doctorName,
-  //         hasVisited: hasVisitedBool,
-  //         address,
-  //       },
-  //       {
-  //         withCredentials: true,
-  //         headers: { "Content-Type": "application/json" },
-  //       }
-  //     );
-  //     toast.success(data.message);
-  //     setFirstName(""),
-  //       setLastName(""),
-  //       setEmail(""),
-  //       setPhone(""),
-  //       setNID(""),
-  //       setDob(""),
-  //       setGender(""),
-  //       setAppointmentDate(""),
-  //       setDepartment(""),
-  //       setDoctorName(""),
-  //       setHasVisited(""),
-  //       setAddress("");
-  //   } catch (error) {
-  //     toast.error(error.response.data.message);
-  //   }
-  // };
 
   return (
     <>
