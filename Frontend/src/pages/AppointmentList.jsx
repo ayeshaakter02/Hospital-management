@@ -1,6 +1,4 @@
 import React from "react";
-// import Hero from "../components/Hero";
-// import Biography from "../components/Biography";
 import List from "../components/List";
 
 const AppointmentList = () => {
