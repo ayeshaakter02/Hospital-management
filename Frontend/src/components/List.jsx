@@ -1,20 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { ref, onValue, remove } from "firebase/database";
 import { db } from "../firebase.config";
+import { Context } from "../main";
 
 const List = () => {
   const [appointments, setAppointments] = useState([]);
+  const { user } = useContext(Context);
 
   useEffect(() => {
-    const appointmentsRef = ref(db, "appointments/");
-    onValue(appointmentsRef, (snapshot) => {
-      let data = [];
-      snapshot.forEach((child) => {
-        data.push({ id: child.key, ...child.val() });
-      });
-      setAppointments(data);
+  const appointmentsRef = ref(db, "appointments/");
+  onValue(appointmentsRef, (snapshot) => {
+    let data = [];
+    snapshot.forEach((child) => {
+      data.push({ id: child.key, ...child.val() });
     });
-  }, []);
+
+    const filtered = data.filter((a) => a.userEmail === user?.email);
+    setAppointments(filtered);
+  });
+}, [user]);
+
 
   const handleDelete = (id) => {
     remove(ref(db, "appointments/" + id));
@@ -30,8 +35,11 @@ const List = () => {
         boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
       }}
     >
-      <h2 style={{marginBottom: "16px"}}>Appointment List</h2>
-      <table className="list-table" style={{marginBottom: "16px", width: "100%", borderCollapse: "collapse"}}>
+      <h2 style={{ marginBottom: "16px" }}>My Appointments</h2>
+      <table
+        className="list-table"
+        style={{ marginBottom: "16px", width: "100%", borderCollapse: "collapse" }}
+      >
         <thead>
           <tr>
             <th>Name</th>

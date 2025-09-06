@@ -6,28 +6,50 @@ import { auth } from "../firebase.config";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = () => {
-  const { isAuthenticated, setIsAuthenticated } = useContext(Context);
+  // const { isAuthenticated, setIsAuthenticated } = useContext(Context);
+  const { isAuthenticated, setIsAuthenticated, setUser } = useContext(Context);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigateTo = useNavigate();
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    try {
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        email,
-        password
-      );
+  // const handleLogin = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const userCredential = await signInWithEmailAndPassword(
+  //       auth,
+  //       email,
+  //       password
+  //     );
 
-      toast.success("Login Successful!");
-      setIsAuthenticated(true);
-      navigateTo("/");
-    } catch (error) {
-      toast.error(error.message);
-      console.error(error);
-    }
-  };
+  //     toast.success("Login Successful!");               
+  //     setIsAuthenticated(true);
+  //     navigateTo("/");
+  //   } catch (error) {
+  //     toast.error(error.message);
+  //     console.error(error);
+  //   }
+  // };
+
+  const handleLogin = async (e) => {
+  e.preventDefault();
+  try {
+    const userCredential = await signInWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+
+    const loggedInUser = userCredential.user;
+
+    toast.success("Login Successful!");
+    setIsAuthenticated(true);
+    setUser(loggedInUser);   // এখানে user কে context এ রাখুন
+    navigateTo("/");
+  } catch (error) {
+    toast.error(error.message);
+    console.error(error);
+  }
+};
 
   if (isAuthenticated) {
     return <Navigate to={"/"} />;
