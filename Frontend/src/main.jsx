@@ -3,8 +3,8 @@ import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 
 // Firebase import
-import { auth } from "./firebase.config";
 import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./firebase.config.js";
 
 export const Context = createContext({ isAuthenticated: false });
 
