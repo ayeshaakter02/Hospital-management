@@ -59,40 +59,6 @@ const AppointmentForm = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  // const handleAppointment = (e) => {
-  //   e.preventDefault();
-  //   push(ref(db, "appointments/"), {
-  //   firstName: form.firstName || "",
-  //   lastName: form.lastName || "",
-  //   email: form.email || "",
-  //   phone: form.phone || "",
-  //   nid: form.nid || "",
-  //   dob: form.dob || "",
-  //   gender: form.gender || "",
-  //   appointmentDate: form.appointmentDate || "",
-  //   department: form.department || "",
-  //   doctorName: form.doctorName || "",
-  //   address: form.address || "",
-  // })
-  //     .then(() => {
-  //       toast.success("Appointment submitted!");
-  //       setForm({
-  //         firstName: "",
-  //         lastName: "",
-  //         email: "",
-  //         phone: "",
-  //         nid: "",
-  //         dob: "",
-  //         gender: "",
-  //         appointmentDate: "",
-  //         department: "",
-  //         doctorName: "",
-  //         address: "",
-  //       });
-  //     })
-  //     .catch((err) => console.error(err));
-  // };
-
   const handleAppointment = (e) => {
     e.preventDefault();
 

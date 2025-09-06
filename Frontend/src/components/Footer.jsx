@@ -28,13 +28,6 @@ const Footer = () => {
             <p>Group</p>
             <div className="social-icons">
               <a
-                href="https://fairooz2150.github.io/Fairooz/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <IoGlobeOutline />
-              </a>
-              <a
                 href="https://www.facebook.com/ar.badhon.71"
                 target="_blank"
                 rel="noopener noreferrer"
