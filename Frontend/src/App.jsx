@@ -11,7 +11,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import firebaseConfig from './firebase.config.js';
+import firebaseConfig from "./firebase.config.js";
 import AppointmentList from "./pages/AppointmentList.jsx";
 
 function App() {
@@ -21,21 +21,49 @@ function App() {
 
       <Routes>
         {/* Public Routes */}
-        <Route path="/" element={
-            <ProtectedRoute>
-              <div className="pt-24"><Home /></div>
-            </ProtectedRoute>
-          } />
-        <Route path="/about" element={<div className="pt-24"><AboutUs /></div>} />
-        <Route path="/login" element={<div className="pt-24"><Login /></div>} />
-        <Route path="/register" element={<div className="pt-24"><Register /></div>} />
+        <Route
+          path="/about"
+          element={
+            <div className="pt-24">
+              <AboutUs />
+            </div>
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <div className="pt-24">
+              <Login />
+            </div>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <div className="pt-24">
+              <Register />
+            </div>
+          }
+        />
 
         {/* Protected Routes */}
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <div className="pt-24">
+                <Home />
+              </div>
+            </ProtectedRoute>
+          }
+        />
         <Route
           path="/appointment"
           element={
             <ProtectedRoute>
-              <div className="pt-24"><Appointment /></div>
+              <div className="pt-24">
+                <Appointment />
+              </div>
             </ProtectedRoute>
           }
         />
@@ -43,12 +71,13 @@ function App() {
           path="/appointment-list"
           element={
             <ProtectedRoute>
-              <div className="pt-24"><AppointmentList /></div>
+              <div className="pt-24">
+                <AppointmentList />
+              </div>
             </ProtectedRoute>
           }
         />
       </Routes>
-
       <Footer />
       <ToastContainer position="top-center" />
     </Router>

@@ -20,15 +20,23 @@ const AppointmentForm = () => {
     "ENT",
   ];
   const doctorArray = [
-    "Dr. Abul Kalam",
-    "Dr. Tamanna Akter",
     "Dr. Smita",
-    "Dr. Ayesha ",
-    "Dr. Abdul Razzak",
-    "Dr. Rina Khan",
-    "Dr. Parvezz",
-    "Dr. Dananeer",
+    "Dr. Aman",
+    "Dr. Tamanna",
+    "Dr. Nazmul",
+    "Dr. Alisha",
+    "Dr. Rayhan",
     "Dr. Hafsa",
+    "Dr. Rayaan",
+    "Dr. Tuni",
+    "Dr. Rifat",
+    "Dr. Rina",
+    "Dr. Parvezz",
+    "Dr. Sheuly",
+    "Dr. Mamun",
+    "Dr. Ayan",
+    "Dr. Reshma",
+    "Dr. Abir",
   ];
 
   const [form, setForm] = useState({

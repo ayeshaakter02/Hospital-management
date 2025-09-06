@@ -489,6 +489,7 @@ footer div:last-child p {
   min-height: 300px;
   margin: 0 10px;
   text-decoration: none;
+  gap: 8px;
 }
 .card:hover {
   box-shadow: 0 0px 15px rgba(41, 78, 157, 0.5);
@@ -513,6 +514,19 @@ footer div:last-child p {
   left: 0;
   height: fit-content;
   font-weight: 700;
+}
+
+.card .depart-doc {
+  background: white;
+  width: 280px;
+  font-size: 20px;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 30px;
+  left: 0;
+  height: fit-content;
+  font-weight: 700;
+  margin: 2px 0;
 }
 
 /**********************************************************************************************************************/
