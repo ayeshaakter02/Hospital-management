@@ -13,6 +13,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import firebaseConfig from "./firebase.config.js";
 import AppointmentList from "./pages/AppointmentList.jsx";
+import Doctors from "./pages/Doctors.jsx";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           path="/doctor"
           element={
             <div className="pt-24">
-              <AboutUs />
+              <Doctors />
             </div>
           }
         />

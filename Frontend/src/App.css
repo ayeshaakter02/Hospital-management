@@ -145,6 +145,24 @@ h6 {
   width: 50%;
 }
 
+.doctors {
+  display: flex;
+  gap: 60px;
+  margin: 30px;
+}
+
+.doctors .profile{
+  width: 300px;
+}
+
+.doctors img {
+  width: 350px;
+}
+
+.doctors .profile h6{
+ margin-top: 5px;
+}
+
 @media (max-width: 1186px) {
   h1 {
     font-size: 32px;
