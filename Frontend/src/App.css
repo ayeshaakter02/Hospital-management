@@ -119,12 +119,11 @@ h6 {
   height: 2px;
   background: #8a8282;
   position: absolute;
-  margin-top: 540px;
+  margin-top: 600px;
 }
 
 .review img {
-  width: 700px;
-  height: 450px;
+  width: 50%;
 }
 
 .review p {
@@ -139,8 +138,7 @@ h6 {
 }
 
 .review-end img {
-  width: 700px;
-  height: 450px;
+  width: 50%;
 }
 
 .review-end p {

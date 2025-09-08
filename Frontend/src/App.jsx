@@ -21,14 +21,14 @@ function App() {
 
       <Routes>
         {/* Public Routes */}
-        {/* <Route
+        <Route
           path="/doctor"
           element={
             <div className="pt-24">
               <AboutUs />
             </div>
           }
-        /> */}
+        />
         <Route
           path="/about"
           element={
