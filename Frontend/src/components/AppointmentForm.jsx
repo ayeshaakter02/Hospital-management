@@ -46,7 +46,7 @@ const AppointmentForm = () => {
     lastName: "",
     email: "",
     phone: "",
-    nid: "",
+    visitfee: "Visit-fee: 500",
     dob: "",
     gender: "",
     appointmentDate: "",
@@ -72,7 +72,7 @@ const AppointmentForm = () => {
       lastName: form.lastName || "",
       email: form.email || "",
       phone: form.phone || "",
-      nid: form.nid || "",
+      vistfee: form.visitfee || "",
       dob: form.dob || "",
       gender: form.gender || "",
       appointmentDate: form.appointmentDate || "",
@@ -88,7 +88,7 @@ const AppointmentForm = () => {
           lastName: "",
           email: "",
           phone: "",
-          nid: "",
+          visitfee: "visit-fee: 500",
           dob: "",
           gender: "",
           appointmentDate: "",
@@ -138,11 +138,11 @@ const AppointmentForm = () => {
             />
           </div>
           <div>
-            <input
-              type="number"
-              name="nid"
-              placeholder="NID Number"
-              value={form.nid}
+              <input
+              type=""
+              name="visitfee"
+              placeholder="Visit fee"
+              value={form.visitfee}
               onChange={handleChange}
             />
             <input

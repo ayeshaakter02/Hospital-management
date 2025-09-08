@@ -17,12 +17,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; 
+  z-index: 9999;
 }
 
 .loading-gif {
-  width: 100px; 
-  height: 100px; 
+  width: 100px;
+  height: 100px;
 }
 .btn {
   padding: 7px 20px;
@@ -103,6 +103,48 @@ h6 {
   text-align: center;
   padding: 12px;
   color: #666;
+}
+
+.review {
+  /* margin-top: 50px; */
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 50px 100px;
+}
+
+.review::after {
+  content: "";
+  width: 1500px;
+  height: 2px;
+  background: #8a8282;
+  position: absolute;
+  margin-top: 540px;
+}
+
+.review img {
+  width: 700px;
+  height: 450px;
+}
+
+.review p {
+  width: 50%;
+}
+.review-end {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 20px;
+    padding: 50px 100px;
+}
+
+.review-end img {
+  width: 700px;
+  height: 450px;
+}
+
+.review-end p {
+  width: 50%;
 }
 
 @media (max-width: 1186px) {
@@ -219,8 +261,8 @@ h6 {
   color: gray;
   margin-bottom: 20px;
 }
-.form-component a:hover{
-  color:#40699d;
+.form-component a:hover {
+  color: #40699d;
 }
 .form-component form {
   display: flex;
@@ -269,7 +311,7 @@ h6 {
 .form-component .wrapper .banner:last-child img {
   max-width: 450px;
 }
-button{
+button {
   cursor: pointer;
 }
 .login-form {
