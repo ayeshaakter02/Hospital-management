@@ -148,7 +148,7 @@ h6 {
 .doctors {
   display: flex;
   gap: 60px;
-  margin: 30px;
+  margin-bottom: 40px;
 }
 
 .doctors .profile{
@@ -157,10 +157,7 @@ h6 {
 
 .doctors img {
   width: 350px;
-}
-
-.doctors .profile h6{
- margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 1186px) {
