@@ -3,7 +3,7 @@ import React from "react";
 const Review = () => {
   return (
     <div className="container">
-      <h1>Review of Patients Speak</h1>
+      <h1>Review of Patients</h1>
       <div className="review">
         <img src="Patient1.jpg" alt="" />
         <p>

@@ -11,7 +11,7 @@ const AboutUs = () => {
         title={"Learn More About Us | Life Care Hospital "}
         imageUrl={"/about.png"}
       />
-      {/* <Biography imageUrl={"/whoweare.png"}/> */}
+      <Biography imageUrl={"/whoweare.png"}/>
       <Review/>
     </>
   );
