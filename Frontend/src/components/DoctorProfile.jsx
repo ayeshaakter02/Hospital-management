@@ -41,14 +41,14 @@ const DoctorProfile = () => {
         <div className="profile">
           <img src="/departments/doctor-female.jpg" alt="" />
           <div>
-            <h6>Dr. Ayesha</h6>
+            <h6>Dr. Alisha</h6>
             <p>Associate Professor MBBS, Dip in Cardiology, <b>in Lab-Aid Hostpital</b></p>
           </div>
         </div>
         <div className="profile">
           <img src="/departments/doctor-male.png" alt="" />
           <div>
-            <h6>Dr. Jakaria</h6>
+            <h6>Dr. Rayhan</h6>
             <p>Consultant MBBS, Dip in Cardiology, <b>in PG</b></p>
           </div>
         </div>
@@ -119,7 +119,7 @@ const DoctorProfile = () => {
         <div className="profile">
           <img src="/departments/doctor-female.jpg" alt="" />
           <div>
-            <h6>Dr. Ayesha</h6>
+            <h6>Dr. Alisha</h6>
             <p>Consultant MBBS, D-Card, Dip in Dermatology, <b>in Sir Solimullah Medical</b></p>
           </div>
         </div>

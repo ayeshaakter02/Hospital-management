@@ -18,8 +18,8 @@ const Departments = () => {
     },
     {
       name: "Cardiology",
-      doctor1: "Dr. Ayesha",
-      doctor2: "Dr. Jakaria",
+      doctor1: "Dr. Alisha",
+      doctor2: "Dr. Rayaan",
       imageUrl: "/departments/cardio.jpg",
     },
     {
@@ -48,8 +48,8 @@ const Departments = () => {
     },
     {
       name: "Dermatology",
-      doctor1: "Dr. Ayesha",
-      doctor2: "Dr. Wasim",
+      doctor1: "Dr. Alisha",
+      doctor2: "Dr. Ayan",
       imageUrl: "/departments/derma.jpg",
     },
     {

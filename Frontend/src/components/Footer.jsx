@@ -18,9 +18,9 @@ const Footer = () => {
           <div>
             <h4>Quick Links</h4>
             <ul>
-              <Link to={"/"}>Home</Link>
-              <Link to={"/appointment"}>Appointment</Link>
-              <Link to={"/about"}>About Us</Link>
+              <Link className="nav" to={"/"}>Home</Link>
+              <Link className="nav" to={"/appointment"}>Appointment</Link>
+              <Link className="nav" to={"/about"}>About Us</Link>
             </ul>
           </div>
           <div>
@@ -54,15 +54,15 @@ const Footer = () => {
             <h4>Contact</h4>
             <div>
               <FaPhone />
-              <span>01787438107</span>
+              <span className="nav">01787438107</span>
             </div>
             <div>
               <MdEmail />
-              <span>lifecare@gmail.com</span>
+              <span className="nav">lifecare@gmail.com</span>
             </div>
             <div>
             <FaLocationDot/>
-            <span>Dhaka, Bangladesh</span>
+            <span className="nav">Dhaka, Bangladesh</span>
             </div>
           </div>
         </div>
