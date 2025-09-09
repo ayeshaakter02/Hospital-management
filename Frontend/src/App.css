@@ -509,14 +509,18 @@ footer .content div:last-child div svg {
   }
   footer .content div,
   footer .content div:nth-child(3) {
-    width: 100%;
+    width: 50%;
   }
+
 }
 @media (max-width: 390px) {
   footer .content div:nth-child(3) ul li {
     display: flex;
     flex-direction: column;
   }
+  /* .footer .logo-img{
+    width: 100px;
+  } */
 }
 
 footer div:last-child p {
