@@ -10,8 +10,6 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigateTo = useNavigate();
-
-  // const handleLogin = async (e) => {
   //   e.preventDefault();
   //   try {
   //     const userCredential = await signInWithEmailAndPassword(
