@@ -6,7 +6,6 @@ import { auth } from "../firebase.config";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = () => {
-  // const { isAuthenticated, setIsAuthenticated } = useContext(Context);
   const { isAuthenticated, setIsAuthenticated, setUser } = useContext(Context);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -43,7 +42,7 @@ const Login = () => {
 
     toast.success("Login Successful!");
     setIsAuthenticated(true);
-    setUser(loggedInUser);   // এখানে user কে context এ রাখুন
+    setUser(loggedInUser);
     navigateTo("/");
   } catch (error) {
     toast.error(error.message);
