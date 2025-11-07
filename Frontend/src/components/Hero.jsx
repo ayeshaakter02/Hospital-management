@@ -16,7 +16,7 @@ const Hero = ({ title, imageUrl }) => {
                 </p>
             </div>
             <div className="banner">
-                <img src={imageUrl} alt="Hero" className='animated-image'/>
+                <img src={imageUrl} alt="Hero"/>
                 <span>
                     <img src="/Vector.png" alt="Vector" />
                 </span>
