@@ -10,23 +10,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigateTo = useNavigate();
-  //   e.preventDefault();
-  //   try {
-  //     const userCredential = await signInWithEmailAndPassword(
-  //       auth,
-  //       email,
-  //       password
-  //     );
-
-  //     toast.success("Login Successful!");               
-  //     setIsAuthenticated(true);
-  //     navigateTo("/");
-  //   } catch (error) {
-  //     toast.error(error.message);
-  //     console.error(error);
-  //   }
-  // };
-
+  
   const handleLogin = async (e) => {
   e.preventDefault();
   try {
