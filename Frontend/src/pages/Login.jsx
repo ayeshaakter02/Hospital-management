@@ -10,27 +10,27 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigateTo = useNavigate();
-  
+
   const handleLogin = async (e) => {
-  e.preventDefault();
-  try {
-    const userCredential = await signInWithEmailAndPassword(
-      auth,
-      email,
-      password
-    );
+    e.preventDefault();
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
 
-    const loggedInUser = userCredential.user;
+      const loggedInUser = userCredential.user;
 
-    toast.success("Login Successful!");
-    setIsAuthenticated(true);
-    setUser(loggedInUser);
-    navigateTo("/");
-  } catch (error) {
-    toast.error(error.message);
-    console.error(error);
-  }
-};
+      toast.success("Login Successful!");
+      setIsAuthenticated(true);
+      setUser(loggedInUser);
+      navigateTo("/");
+    } catch (error) {
+      toast.error(error.message);
+      console.error(error);
+    }
+  };
 
   if (isAuthenticated) {
     return <Navigate to={"/"} />;
@@ -41,10 +41,10 @@ const Login = () => {
       <h2>Login</h2>
       <p>Please Login to Continue</p>
       <p>
-        Welcome to Life Care. Please manage appointments and stay
-        connected with your healthcare provider. Your privacy and security are
-        our top priorities. If you experience any issues, please contact our
-        support team for assistance.
+        Welcome to Life Care. Please manage appointments and stay connected with
+        your healthcare provider. Your privacy and security are our top
+        priorities. If you experience any issues, please contact our support
+        team for assistance.
       </p>
       <form onSubmit={handleLogin}>
         <input
