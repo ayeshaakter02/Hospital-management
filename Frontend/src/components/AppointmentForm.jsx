@@ -10,35 +10,32 @@ const AppointmentForm = () => {
   const [hasVisited, setHasVisited] = useState(false);
   const { user } = useContext(Context);
 
-  const departmentsArray = [
-    "Pediatrics",
-    "Orthopedics",
-    "Cardiology",
-    "Neurology",
-    "Oncology",
-    "Radiology",
-    "Physical Therapy",
-    "Dermatology",
-    "ENT",
+  const timeslotArray = [
+    "9:00 (AM) - 12:00 (PM)",
+    "12:30 (PM) - 03:00 (PM)",
+    "03:00 (PM) - 06:00 (PM)",
+    "06:00 (PM) - 09:00 (PM)",
   ];
+  
   const doctorArray = [
-    "Dr. Smita",
-    "Dr. Aman",
-    "Dr. Tamanna",
-    "Dr. Nazmul",
-    "Dr. Alisha",
-    "Dr. Rayhan",
-    "Dr. Hafsa",
-    "Dr. Rayaan",
-    "Dr. Tuni",
-    "Dr. Rifat",
-    "Dr. Rina",
-    "Dr. Parvezz",
-    "Dr. Sheuly",
-    "Dr. Mamun",
-    "Dr. Ayan",
-    "Dr. Reshma",
-    "Dr. Abir",
+    "Pediatrics -> Dr. Smita",
+    "Pediatrics -> Dr. Aman",
+    "Orthopedics -> Dr. Tamanna",
+    "Orthopedics -> Dr. Nazmul",
+    "Cardiology -> Dr. Alisha",
+    "Cardiology -> Dr. Rayhan",
+    "Neurology -> Dr. Hafsa",
+    "Neurology -> Dr. Rayaan",
+    "Oncology -> Dr. Tuni",
+    "Oncology -> Dr. Rifat",
+    "Radiology -> Dr. Rina",
+    "Radiology -> Dr. Parvezz",
+    "Physical Therapy -> Dr. Sheuly",
+    "Physical Therapy -> Dr. Mamun",
+    "Dermatology -> Dr. Ayan",
+    "Dermatology -> Dr. Anayaa",
+    "ENT -> Dr. Reshma",
+    "ENT -> Dr. Abir",
   ];
 
   const [form, setForm] = useState({
@@ -50,7 +47,7 @@ const AppointmentForm = () => {
     dob: "",
     gender: "",
     appointmentDate: "",
-    department: "",
+    timeslot: "",
     doctorName: "",
     address: "",
   });
@@ -76,7 +73,7 @@ const AppointmentForm = () => {
       dob: form.dob || "",
       gender: form.gender || "",
       appointmentDate: form.appointmentDate || "",
-      department: form.department || "",
+      timeslot: form.timeslot || "",
       doctorName: form.doctorName || "",
       address: form.address || "",
       userEmail: user.email, 
@@ -92,7 +89,7 @@ const AppointmentForm = () => {
           dob: "",
           gender: "",
           appointmentDate: "",
-          department: "",
+          timeslot: "",
           doctorName: "",
           address: "",
         });
@@ -169,8 +166,8 @@ const AppointmentForm = () => {
             />
           </div>
           <div>
-            <select name="department" value={form.department} onChange={handleChange}>
-              {departmentsArray.map((depart, index) => {
+            <select name="timeslot" value={form.timeslot} onChange={handleChange}>
+              {timeslotArray.map((depart, index) => {
                 return (
                   <option value={depart} key={index}>
                     {depart}

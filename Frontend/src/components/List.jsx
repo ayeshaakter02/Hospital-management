@@ -46,7 +46,7 @@ const List = () => {
             <th>Email</th>
             <th>Phone</th>
             <th>Appointment Date</th>
-            <th>Department</th>
+            <th>Time Slot</th>
             <th>Doctor Name</th>
             <th>Action</th>
           </tr>
@@ -60,7 +60,7 @@ const List = () => {
               <td>{a.email}</td>
               <td>{a.phone}</td>
               <td>{a.appointmentDate}</td>
-              <td>{a.department}</td>
+              <td>{a.timeslot}</td>
               <td>{a.doctorName}</td>
               <td>
                 <button

@@ -48,7 +48,7 @@ const Departments = () => {
     },
     {
       name: "Dermatology",
-      doctor1: "Dr. Alisha",
+      doctor1: "Dr. Anayaa",
       doctor2: "Dr. Ayan",
       imageUrl: "/departments/derma.jpg",
     },

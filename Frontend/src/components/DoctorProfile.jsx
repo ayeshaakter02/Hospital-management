@@ -41,7 +41,7 @@ const DoctorProfile = () => {
         <div className="profile">
           <img src="/departments/doctor-female.jpg" alt="" />
           <div>
-            <h6>Dr. Alisha</h6>
+            <h6>Dr. Anayaa</h6>
             <p>Associate Professor MBBS, Dip in Cardiology, <b>in Lab-Aid Hostpital</b></p>
           </div>
         </div>
